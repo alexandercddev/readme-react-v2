@@ -1,0 +1,279 @@
+/** 
+* @author: Alexander Chi
+* @description:
+* @date: 28/Junio/2021
+**/
+/** Incluido para diseño **/
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700,800,900&display=swap');
+
+* {
+  margin: 0;
+  padding:  0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 100px;
+  z-index: 10000;
+  transition: 0.6s;
+}
+
+header .logo{
+  position: relative;
+  font-weight: 700;
+  color: #FFF;
+  text-decoration: none;
+  font-size:  2em;
+  text-transform: uppercase;
+  letter-spacing:  2px;
+  transition: 0.6s;
+}
+
+header #toggle {
+  position: relative;
+  width:  30px;
+  height: 30px;
+  cursor: pointer; 
+}
+
+header #toggle::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  width:  100%;
+  height: 2px;
+  background: #FFF;
+}
+
+header #toggle::after {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width:  100%;
+  height: 2px;
+  background: #FFF;
+} 
+
+.banner {
+  position: relative;
+  width:  100%;
+  min-height: 100vh;
+  padding: 100px; 
+  background-image: url("./img/background.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.banner.active header #toggle::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.banner.active header #toggle::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.banner.active {
+  transform:  translateX(-400px);
+}
+
+#navigation {
+  position: fixed;
+  top: 0;
+  right: -200px;
+  width: 400px;
+  height: 100vh;
+  background: #303335;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+}
+
+#navigation.active {
+  right: 0;
+}
+
+#navigation ul {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+}
+
+#navigation ul li {
+  list-style: none;
+}
+
+#navigation ul li a {
+  color: #FFF;
+  text-decoration: none;
+  display: inline-block;
+  font-size:  2em;
+  font-weight:  600;
+  text-transform: uppercase;
+}
+
+.content {
+  max-width: 600px;
+}
+
+.content h2 {
+  color: #FFF;
+  font-size: 2.5em;
+}
+ 
+.content h2 span {
+  color: #f9f9aa;
+  font-size: 1.2em;
+}
+
+.content p {
+  color: #FFF;
+  font-size: 1.2em; 
+  font-weight: 300;
+}
+
+.content a {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  background: #FFF;
+  color: #000;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 1.2em; 
+  font-weight: 500;
+}
+
+.social__medial {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 100px;
+}
+
+.social__medial li {
+  list-style:  none;
+}
+
+.social__medial li a {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  border: 1px solid #FFF;
+  margin: 10px 0 0;
+}
+
+.social__medial li a:hover {
+  background: #FFF;
+}
+
+.social__medial li img {
+  max-width: 20px;
+  filter: invert(1); 
+  mix-blend-mode: difference;
+}
+
+@media (max-width: 767px) {
+  header { 
+    padding: 20px 50px; 
+  }
+
+  .banner {
+    padding: 100px 50px 150px;
+  }
+
+  .banner h2{
+    font-size: 1.8em;
+  }
+
+  .banner .content p, 
+  .banner .content a{
+    font-size: 1em;
+  }
+
+  .banner.active {
+    transform:  translateX(-250px);
+  }
+
+  #navigation {
+    width: 250px;
+  }
+
+  #navigation ul li a {
+    font-size: 1.5em;
+    margin: 5px 0;
+  }
+
+  .social__medial {
+    position: absolute;
+    bottom: 50px;
+    right: initial;
+    flex-direction: row;
+  }
+
+  .social__medial li a {
+    margin: initial;
+    margin-right: 10px;
+  }
+}
+
+
+
+/** CSS inicial react create app **/
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/**  **/
