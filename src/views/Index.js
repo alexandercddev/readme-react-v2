@@ -4,6 +4,8 @@
 * @date: 28/Junio/2021
 **/
 import React, { useState } from 'react'; 
+import { Home } from './componets/Home';
+import { Projects } from './componets/Projects';
 
 const icons = [
     {
@@ -23,31 +25,50 @@ const icons = [
     },
 ];
 
-const navigations = [
+let navigations = [
     {
         key: 'home', 
-        name: 'Home', 
+        name: 'Home',  
+        component: <Home/>
     },
     {
         key: 'about-me',
-        name: 'Sobre mí', 
+        name: 'Sobre mí',   
     },
     {
         key: 'services',
         name: 'Servicios', 
     },
     {
-        key: 'portfolio',
-        name: 'Portafolio', 
+        key: 'projects',
+        name: 'Proyectos',  
+        component: <Projects/>
     },
     {
         key: 'contact',
-        name: 'Contacto', 
+        name: 'Contacto',   
     },
+    /*{
+        key: 'language',
+        name: 'Language', 
+        items: [
+            {
+                key: 'es',
+                name: 'Español', 
+                active: true
+            },
+            {
+                key: 'en',
+                name: 'Ingles', 
+                active: true
+            }
+        ]
+    },*/
 ];
 
 export function Portfolio (props) {
     const [active, setActive] = useState(''); 
+    const [viewActive, setViewActive] = useState(navigations[0])
     const handleClick = () => {
         if(active === '')
             setActive('active')
@@ -56,25 +77,25 @@ export function Portfolio (props) {
     } 
     const handleWindows = (url) => {
         window.open(url)
+    } 
+    const handleContent = (index) => {
+        setViewActive(navigations[index])
     }
 
     return (
         <>
-            <section className={'banner ' + active} id="sec" >
+            <section 
+                className={'banner ' + active} 
+                id="sec" 
+                style={{
+                    backgroundImage: `url("./img/${viewActive.background ?? "background.jpg"}")` 
+                }}
+                >
                 <header>
                     <a href="#" className="logo" >LOGO</a>
                     <div id="toggle" onClick={handleClick}></div>
                 </header>
-                <div className = "content">
-                    <h2>Hello World,</h2>
-                    <h2>I'm <span>Alexander Chi</span></h2>
-                    <p>
-                        Desarrollador frontend y backend lo que muchos conocen como 
-                        fullstack con más de 3 años de experiencia en el mundo del 
-                        desarrollo web.
-                    </p>
-                    <a href="#" >Más información</a>
-                </div>
+                {viewActive.component}
                 <ul className="social__medial">
                     {icons.map((item, index) => {
                         return (<li key={'icon' + index}>
@@ -89,7 +110,7 @@ export function Portfolio (props) {
                 <ul>
                     {navigations.map((item, index) => {
                         return (<li key={item.key}>
-                            <a href="#">
+                            <a onClick={() => { handleContent(index) }}>
                                 {item.name}
                             </a>
                         </li>)

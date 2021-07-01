@@ -3,7 +3,7 @@
 * @description:
 * @date: 28/Junio/2021
 **/
-/** Incluido para diseño **/
+/** Incluido para diseño HOME**/
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700,800,900&display=swap');
 
 * {
@@ -66,7 +66,7 @@ header #toggle::after {
   width:  100%;
   min-height: 100vh;
   padding: 100px; 
-  background-image: url("./img/background.jpg");
+  /*background-image: url("./img/background.jpg");*/
   background-size: cover;
   display: flex;
   align-items: center;
@@ -123,9 +123,50 @@ header #toggle::after {
   display: inline-block;
   font-size:  2em;
   font-weight:  600;
-  text-transform: uppercase;
+  text-transform: uppercase; 
 }
 
+#navigation ul li a:hover { 
+  width:  100%;
+  height: 2px;
+  background: #FFF;
+}
+
+a {
+  cursor: pointer;
+}
+
+.wavy {
+  position: relative; 
+  -webkit-box-reflect: below -25px linear-gradient(
+    transparent, rgba(0, 0, 0, 0.2)
+  );
+}
+
+.wavy span {
+  position: relative; 
+  display: inline-block; 
+  color: #FFF;
+  text-transform: uppercase;
+  animation: animate 1s ease-in-out infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0px);
+  }
+
+  20% {
+    transform: translateY(-20px);
+  }
+
+  40%, 100% {
+    transform: translateY(0px);
+  }
+
+}
+ 
 .content {
   max-width: 600px;
 }
@@ -135,10 +176,10 @@ header #toggle::after {
   font-size: 2.5em;
 }
  
-.content h2 span {
+.content h2 span.name {
   color: #f9f9aa;
   font-size: 1.2em;
-}
+} 
 
 .content p {
   color: #FFF;
@@ -188,8 +229,72 @@ header #toggle::after {
   max-width: 20px;
   filter: invert(1); 
   mix-blend-mode: difference;
+} 
+
+/** PROJECTS **/
+.body {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  min-height: 100vh;  
 }
 
+.container__projects {
+  position: relative;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill minmax(300px, 1fr));
+  grid-template-rows: minmax(100px, auto);
+  grid-auto-flow: dense;
+  grid-gap: 10px;
+}
+
+.container__projects .box__projects {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  display: grid;
+  font-size: 20px;
+  place-items: center;
+  text-align: center;
+  color: #FFF;
+  transition: 0.5s;
+}
+
+.container__projects .box__projects:hover {
+  background: rgb(233, 30, 99, 0.5);  
+} 
+
+.container__projects .box__projects img {
+  position: relative;
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+.container__projects .box__projects:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.container__projects .box__projects:nth-child(2) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.container__projects .box__projects:nth-child(4) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.container__projects .box__projects:nth-child(4) {
+  grid-column: span 3;
+  grid-row: span 1;
+}
+
+ 
+
+
+/** MOVILE **/
 @media (max-width: 767px) {
   header { 
     padding: 20px 50px; 
@@ -232,9 +337,17 @@ header #toggle::after {
     margin: initial;
     margin-right: 10px;
   }
+
+  .container__projects {
+    grid-template-columns: repeat(auto-fill minmax(50% 1fr));
+    grid-template-rows: minmax(auto, auto);
+  }
+
+  .container__projects .box__projects {
+    grid-column: unset !important;
+    grid-row: unset !important;
+  }
 }
-
-
 
 /** CSS inicial react create app **/
 .App {
