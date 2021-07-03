@@ -16,7 +16,7 @@ const icons = [
     {
         name: 'YouTube',
         icon: './svg/youtube-icon.svg',
-        url: 'https://www.youtube.com/channel/UCmXXKj2lTr8J1zh3KCTj2XQ'
+        url: 'https://www.youtube.com/channel/UCmXXKj2lTr8J1zh3KCTj2XQ?sub_confirmation=1'
     },
     {
         name: 'Github',
