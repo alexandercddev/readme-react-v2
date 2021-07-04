@@ -113,7 +113,9 @@ export function Portfolio (props) {
                 }}
                 >
                 <header>
-                    <a onClick={() => {handleContent(0)}} className="logo" >LOGO</a>
+                    <a onClick={() => {handleContent(0)}} className="logo" >
+                        <img className="img__logo__banner" src="./img/logo.png" ></img>
+                    </a>
                     <div id="toggle" onClick={handleClick}></div>
                 </header>
                 {viewActive.component}

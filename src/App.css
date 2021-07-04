@@ -176,7 +176,8 @@ a {
   font-size: 2.5em;
 }
  
-.content h2 span.name {
+.content h2 span.name,
+.content p span.name{
   color: #f9f9aa;
   font-size: 1.2em;
 } 
@@ -317,8 +318,7 @@ a {
   grid-row: unset !important;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  padding: 20px;
-  display: grid;
+  padding: 20px; 
   font-size: 20px; 
   color: #FFF;
   transition: 0.5s;
@@ -341,7 +341,28 @@ a {
   position: relative;
   display: contents;
   width: 100vh;
-  text-align: center;
+  text-align: center; 
+}
+
+.content__logo {
+  width: 100%;
+  text-align: center; 
+}
+
+.content__logo .img__logo { 
+  width: 150px;
+  border-radius: 5em;  
+  -webkit-box-reflect: below 5px linear-gradient(
+    transparent, rgba(0, 0, 0, 0.2)
+  );  
+}
+
+.img__logo__banner { 
+  width: 35px;
+  border-radius: 5em;  
+  -webkit-box-reflect: below 5px linear-gradient(
+    transparent, rgba(0, 0, 0, 0.2)
+  );  
 }
 
 /** MOVILE **/
