@@ -7,12 +7,13 @@ import React, { useState } from 'react';
 
 const items = [
     {
-        key: "alexandercd-v2",
-        img: "background.jpg",
-        description: "Desarrollador frontend y backend lo que muchos conocen como",
+        key: "miel-roche",
+        img: "miel-roche.jpg",
+        description: "Sitio web con WordPress y elementor",
+        url: 'https://www.mielroche.com.mx/',
     },
     {
-        key: "miel-roche",
+        key: "miel-roched",
         img: "background.jpg",
         description: "Desarrollador frontend y backend lo que muchos conocen como",
     },
@@ -42,12 +43,12 @@ export function Projects (props) {
         <div className="body">
             <div className="container__projects"> 
                 {items.map((item, index) => {
-                    return <div className="box__projects" key={item.key}> 
+                    return <a className="box__projects" onClick={() => {handleWindows(item.url)}} key={item.key}>
                         <div className="content__projects">
-                            <img width="250" src={"./img/" + item.img}></img>
+                            <img width="250" src={"./img/projects/" + item.img}></img>
                             <p>{item.description}</p>
                         </div>
-                    </div>
+                    </a>
                  })}
             </div>
         </div>

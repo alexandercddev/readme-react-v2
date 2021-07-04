@@ -4,24 +4,37 @@
 * @date: 28/Junio/2021
 **/
 import React, { useState } from 'react'; 
+import { useParams } from 'react-router-dom';
 import { Home } from './componets/Home';
 import { Projects } from './componets/Projects';
+import { AboutMe } from './componets/AboutMe';
+import { Contact } from './componets/Contact';
+import { Links } from './componets/Links';
 
-const icons = [
+const routes = [
     {
         name: 'Tiktok',
         icon: './svg/tiktok-icon.svg',
-        url: 'https://www.tiktok.com/@alexandercds?'
+        url: 'https://www.tiktok.com/@alexandercds?',
+        userName: 'alexandercds',
     },
     {
         name: 'YouTube',
         icon: './svg/youtube-icon.svg',
-        url: 'https://www.youtube.com/channel/UCmXXKj2lTr8J1zh3KCTj2XQ?sub_confirmation=1'
+        url: 'https://www.youtube.com/channel/UCmXXKj2lTr8J1zh3KCTj2XQ?sub_confirmation=1',
+        userName: 'Alexander CDs',
     },
     {
         name: 'Github',
         icon: './svg/github-icon.svg',
-        url: 'https://github.com/AlexanderCDs'
+        url: 'https://github.com/AlexanderCDs',
+        userName: 'AlexanderCDs',
+    },
+    {
+        name: 'Instagram',
+        icon: './svg/instagram-icon.svg',
+        url: 'https://www.instagram.com/alexander_cd/?hl=es-la',
+        userName: 'alexander_cd',
     },
 ];
 
@@ -33,11 +46,13 @@ let navigations = [
     },
     {
         key: 'about-me',
-        name: 'Sobre mí',   
+        name: 'Sobre mí', 
+        component: <AboutMe/>  
     },
     {
-        key: 'services',
-        name: 'Servicios', 
+        key: 'routes',
+        name: 'Links', 
+        component: <Links routes={routes}/>
     },
     {
         key: 'projects',
@@ -47,6 +62,7 @@ let navigations = [
     {
         key: 'contact',
         name: 'Contacto',   
+        component: <Contact/>
     },
     /*{
         key: 'language',
@@ -66,20 +82,25 @@ let navigations = [
     },*/
 ];
 
-export function Portfolio (props) {
+export function Portfolio (props) { 
+    const pathName = window.location.pathname;
     const [active, setActive] = useState(''); 
-    const [viewActive, setViewActive] = useState(navigations[0])
+    const [viewActive, setViewActive] = useState(pathName === '/links' ? navigations[2] : navigations[0]);
+    const [socialMedial, setSocialMedial] = useState(pathName !== '/links'); 
     const handleClick = () => {
         if(active === '')
-            setActive('active')
+            setActive('active');
         else
-            setActive('')
+            setActive('');
     } 
     const handleWindows = (url) => {
-        window.open(url)
+        window.open(url);
     } 
-    const handleContent = (index) => {
-        setViewActive(navigations[index])
+    const handleContent = (index) => { 
+        const { key } = navigations[index];
+        setViewActive(navigations[index]);
+        setActive('');
+        setSocialMedial( key !== 'routes' );
     }
 
     return (
@@ -92,19 +113,21 @@ export function Portfolio (props) {
                 }}
                 >
                 <header>
-                    <a href="#" className="logo" >LOGO</a>
+                    <a onClick={() => {handleContent(0)}} className="logo" >LOGO</a>
                     <div id="toggle" onClick={handleClick}></div>
                 </header>
                 {viewActive.component}
-                <ul className="social__medial">
-                    {icons.map((item, index) => {
-                        return (<li key={'icon' + index}>
-                            <a onClick={() => { handleWindows(item.url) }}>
-                                <img width="35" src={item.icon}></img>
-                            </a>
-                        </li>)
-                    })}
-                </ul>
+                {socialMedial && (
+                    <ul className="social__medial">
+                        {routes.map((item, index) => {
+                            return (<li key={'icon' + index}>
+                                <a onClick={() => { handleWindows(item.url) }}>
+                                    <img width="35" src={item.icon}></img>
+                                </a>
+                            </li>)
+                        })}
+                    </ul>
+                )}
             </section>
             <div id="navigation" className={active}>
                 <ul>

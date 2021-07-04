@@ -250,6 +250,7 @@ a {
 }
 
 .container__projects .box__projects {
+  cursor: pointer;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   padding: 20px;
@@ -292,7 +293,56 @@ a {
 }
 
  
+/** LINKS **/
+.body__routes {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  min-width: 100%;  
+}
 
+.container__routes {
+  position: relative;
+  width: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill minmax(50% 1fr));
+  grid-template-rows: minmax(auto, auto);
+  grid-auto-flow: dense;
+  grid-gap: 10px;
+}
+
+.container__routes .box__routes {
+  cursor: pointer;
+  grid-column: unset !important;
+  grid-row: unset !important;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  display: grid;
+  font-size: 20px; 
+  color: #FFF;
+  transition: 0.5s;
+}
+
+.container__routes .box__routes:hover {
+  background: rgb(233, 30, 99, 0.5);  
+} 
+
+.container__routes .box__routes img { 
+   width: 25px;
+   height: 25px;
+}
+
+.span__routes {  
+  padding-left: 2em;   
+}
+
+.__links {
+  position: relative;
+  display: contents;
+  width: 100vh;
+  text-align: center;
+}
 
 /** MOVILE **/
 @media (max-width: 767px) {
@@ -346,7 +396,7 @@ a {
   .container__projects .box__projects {
     grid-column: unset !important;
     grid-row: unset !important;
-  }
+  } 
 }
 
 /** CSS inicial react create app **/
