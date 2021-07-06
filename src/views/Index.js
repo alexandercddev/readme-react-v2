@@ -36,6 +36,12 @@ const routes = [
         url: 'https://www.instagram.com/alexander_cd/?hl=es-la',
         userName: 'alexander_cd',
     },
+    {
+        name: 'Twitch',
+        icon: './svg/twitch-purple.svg',
+        url: 'https://www.twitch.tv/arthurreset',
+        userName: 'ArthurReset',
+    },
 ];
 
 let navigations = [
@@ -100,7 +106,7 @@ export function Portfolio (props) {
         const { key } = navigations[index];
         setViewActive(navigations[index]);
         setActive('');
-        setSocialMedial( key !== 'routes' );
+        setSocialMedial( key !== 'routes' && key !== 'projects'  );
     }
 
     return (
