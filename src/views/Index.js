@@ -10,6 +10,7 @@ import { Projects } from './componets/Projects';
 import { AboutMe } from './componets/AboutMe';
 import { Contact } from './componets/Contact';
 import { Links } from './componets/Links';
+import Axios from 'axios';
 
 const routes = [
     {
@@ -99,7 +100,7 @@ export function Portfolio (props) {
         else
             setActive('');
     } 
-    const handleWindows = (url) => {
+    const handleWindows = (url, index) => {
         window.open(url);
     } 
     const handleContent = (index) => { 
@@ -129,7 +130,7 @@ export function Portfolio (props) {
                     <ul className="social__medial">
                         {routes.map((item, index) => {
                             return (<li key={'icon' + index}>
-                                <a onClick={() => { handleWindows(item.url) }}>
+                                <a onClick={() => { handleWindows(item.url, index) }}>
                                     <img width="35" src={item.icon}></img>
                                 </a>
                             </li>)
