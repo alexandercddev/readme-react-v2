@@ -78,17 +78,27 @@ header #toggle::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
+  animation: animate-menu 1s ease-in-out;
 }
 
 .banner.active header #toggle::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
+  animation: animate-menu 1s ease-in-out;
 }
 
 .banner.active {
   transform:  translateX(-400px);
 }
+
+@keyframes animate-menu { 
+  0% {
+    transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }  
+}
+
 
 #navigation {
   position: fixed;
@@ -365,6 +375,45 @@ a {
   );  
 }
 
+/** About me **/
+.container__about { 
+  position: relative;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill minmax(300px, 1fr));
+  grid-template-rows: minmax(100px, auto);
+  grid-auto-flow: dense;
+  grid-gap: 10px;
+}
+
+.container__about .box__about {  
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  display: grid;
+  font-size: 20px;
+  place-items: center;
+  text-align: center;
+  color: #FFF;
+  transition: 0.5s;
+}
+
+.p__about {
+  padding: 1.2em;
+  text-align: justify;
+}
+
+.img__about {
+    width: 100%; 
+} 
+
+/** **/
+.container__routes .box__routes .img__not__found {
+  width: 250px !important;
+  height: 250px !important;
+}
+
 /** MOVILE **/
 @media (max-width: 767px) {
   header { 
@@ -373,7 +422,7 @@ a {
 
   .banner {
     padding: 100px 50px 150px;
-  }
+  } 
 
   .banner h2{
     font-size: 1.8em;
@@ -386,6 +435,10 @@ a {
 
   .banner.active {
     transform:  translateX(-250px);
+  }
+
+  .img__logo__banner {
+    display: none;
   }
 
   #navigation {
@@ -409,55 +462,26 @@ a {
     margin-right: 10px;
   }
 
-  .container__projects {
+  .container__projects, 
+  .container__about{
     grid-template-columns: repeat(auto-fill minmax(50% 1fr));
     grid-template-rows: minmax(auto, auto);
   }
 
-  .container__projects .box__projects {
+  .container__projects .box__projects,
+  .container__about .container__about{
     grid-column: unset !important;
     grid-row: unset !important;
   } 
-}
 
-/** CSS inicial react create app **/
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .p__about {
+    padding: 0.2em;
+    font-size: 0.8em ;
+    text-align: justify;
+  }
+  h2 { 
+    font-size: 1.2em !important; 
+    text-align: left !important; 
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/**  **/
+ 
