@@ -37,10 +37,21 @@ header .logo{
 }
 
 header #toggle {
+  content: ' ';
   position: relative;
   width:  30px;
-  height: 30px;
+  height: 30px; 
   cursor: pointer; 
+}
+
+header .toggle__md {
+  margin-top: 14px;
+  content: ' ';
+  position: absolute;
+  width:  30px;
+  height: 2px;
+  background: #FFF; 
+  transition: all 0.5s ease-in-out;
 }
 
 header #toggle::before {
@@ -88,6 +99,10 @@ header #toggle::after {
   animation: animate-menu 1s ease-in-out;
 }
 
+.banner.active header .toggle__md {
+  background: none;
+}
+
 .banner.active {
   transform:  translateX(-400px);
 }
@@ -95,7 +110,8 @@ header #toggle::after {
 @keyframes animate-menu { 
   0% {
     transform: translate(-50%, -50%) rotate(45deg);
-    transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg); 
+    transition: all 0.5s ease-in-out;
   }  
 }
 
@@ -247,20 +263,20 @@ a {
   display: flex;
   justify-content: center;
   align-self: center;
-  min-height: 100vh;  
+  min-width: 100%;   
 }
 
 .container__projects {
   position: relative;
   max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-template-rows: minmax(100px, auto);
   grid-auto-flow: dense;
   grid-gap: 10px;
 }
 
-.container__projects .box__projects {
+.container__projects .box__projects { 
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -283,7 +299,7 @@ a {
   margin-bottom: 10px;
 }
 
-.container__projects .box__projects:nth-child(1) {
+/*.container__projects .box__projects:nth-child(1) {
   grid-column: span 2;
   grid-row: span 1;
 }
@@ -299,9 +315,9 @@ a {
 }
 
 .container__projects .box__projects:nth-child(4) {
-  grid-column: span 3;
+  grid-column: span 2;
   grid-row: span 1;
-}
+}*/
 
  
 /** LINKS **/
@@ -316,7 +332,7 @@ a {
   position: relative;
   width: 100vh;
   display: grid;
-  grid-template-columns: repeat(auto-fill minmax(50% 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(50% 1fr));
   grid-template-rows: minmax(auto, auto);
   grid-auto-flow: dense;
   grid-gap: 10px;
@@ -376,12 +392,19 @@ a {
 }
 
 /** About me **/
+.body__about {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  min-width: 100%;  
+}
+
 .container__about { 
   position: relative;
-  max-width: 100%;
+  max-width: 100vh;
   display: grid;
-  grid-template-columns: repeat(auto-fill minmax(300px, 1fr));
-  grid-template-rows: minmax(100px, auto);
+  grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+  grid-template-rows: minmax(auto, auto);
   grid-auto-flow: dense;
   grid-gap: 10px;
 }
@@ -464,7 +487,7 @@ a {
 
   .container__projects, 
   .container__about{
-    grid-template-columns: repeat(auto-fill minmax(50% 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(50% 1fr));
     grid-template-rows: minmax(auto, auto);
   }
 

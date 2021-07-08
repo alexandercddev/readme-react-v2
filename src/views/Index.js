@@ -43,7 +43,9 @@ export function Portfolio (props) {
                     <a onClick={() => {handleContent(0)}} className="logo" >
                         <img className="img__logo__banner" src="./img/logo.png" ></img>
                     </a>
-                    <div id="toggle" onClick={handleClick}></div>
+                    <div id="toggle" onClick={handleClick}>
+                        <div className="toggle__md"></div>
+                    </div>
                 </header>
                 {viewActive.component}
                 {socialMedial && (

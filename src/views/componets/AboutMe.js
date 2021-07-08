@@ -18,7 +18,7 @@ export function AboutMe (props) {
     } 
 
     return (
-        <div className="body">
+        <div className="body__about">
             <div className="container__about"> 
                 <div className="box__about">
                     <div className="content__about"> 
