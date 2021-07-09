@@ -31,7 +31,7 @@ export const routes = [
     {
         name: 'Instagram',
         icon: './svg/instagram-icon.svg',
-        url: 'https://www.instagram.com/alexander_cd/?hl=es-la',
+        url: 'https://www.instagram.com/alexandercds.cs/?hl=es-la',
         userName: 'alexander_cd',
     },
     {
