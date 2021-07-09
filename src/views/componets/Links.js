@@ -6,7 +6,7 @@
 import React, { useState } from 'react';  
 
 export function Links (props) {
-    const { routes, moreRoutes } = props; 
+    const { routes, moreRoutes, description } = props; 
     const handleWindows = (url) => {
         window.open(url)
     } 
@@ -21,9 +21,7 @@ export function Links (props) {
                     <div className = "content __links"> 
                         <p>@<span className="name">alexandercds</span></p>
                         <p className="box__routes" style={{textAlign: 'justify'}}>
-                            Developer frontend y backend lo que muchos conocen como 
-                            Developer Fullstack con más de 3 años de experiencia en el mundo del 
-                            desarrollo web.
+                            {description.main}
                         </p> 
                     </div>
                     {routes.map((item, index) => {

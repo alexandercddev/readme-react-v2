@@ -6,6 +6,7 @@
 import React, { useState } from 'react'; 
 
 export function Home (props) {
+    const {description} = props;
     const [active, setActive] = useState(''); 
     const handleClick = () => {
         if(active === '')
@@ -38,9 +39,7 @@ export function Home (props) {
                     
                 <h2>I'm <span className="name">Alexander Chi</span></h2>
                 <p>
-                    Desarrollador frontend y backend lo que muchos conocen como 
-                    fullstack con más de 3 años de experiencia en el mundo del 
-                    desarrollo web.
+                    {description.main}
                 </p> 
             </div>
         </>

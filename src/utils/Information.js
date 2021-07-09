@@ -9,6 +9,11 @@ import { AboutMe } from '../views/componets/AboutMe';
 import { Contact } from '../views/componets/Contact';
 import { Links } from '../views/componets/Links';
 
+export const description = {
+    main: "Developer frontend y backend lo que muchos conocen como Developer Fullstack con más de 3 años de experiencia en el mundo del desarrollo web." ,
+    sub: "Me gusta hacer sitios webs como por ejemplo este sitio el cual está construido con React."
+};
+
 export const routes = [
     {
         name: 'Tiktok',
@@ -27,7 +32,7 @@ export const routes = [
         icon: './svg/github-icon.svg',
         url: 'https://github.com/AlexanderCDs',
         userName: 'AlexanderCDs',
-    },
+    }, 
     {
         name: 'Instagram',
         icon: './svg/instagram-icon.svg',
@@ -36,25 +41,20 @@ export const routes = [
     },
     {
         name: 'Twitch',
-        icon: './svg/twitch-purple.svg',
+        icon: './svg/twitch-purple-icon.svg',
         url: 'https://www.twitch.tv/arthurreset',
         userName: 'ArthurReset',
-    },
+    }, 
 ];
 
 export const moreRoutes = [ 
-    /*{
-        name: 'Twitch',
-        icon: './svg/twitch-purple.svg',
-        url: 'https://www.twitch.tv/arthurreset',
-        userName: 'ArthurReset',
-    },
+    
     {
-        name: 'Instagram',
-        icon: './svg/instagram-icon.svg',
-        url: 'https://www.instagram.com/alexander_cd/?hl=es-la',
-        userName: 'alexander_cd',
-    },*/
+        name: 'Facebook',
+        icon: './svg/facebook-icon.svg',
+        url: 'https://www.facebook.com/alexandercds.cs',
+        userName: 'Alexandercds.cs',
+    },
 ];
 
 export const projects = [
@@ -90,17 +90,17 @@ export let navigations = [
     {
         key: 'home', 
         name: 'Home',  
-        component: <Home/>
+        component: <Home description={description}/>
     },
     {
         key: 'about-me',
         name: 'Sobre mí', 
-        component: <AboutMe/>  
+        component: <AboutMe description={description} />  
     },
     {
         key: 'routes',
         name: 'Links', 
-        component: <Links routes={routes} moreRoutes={moreRoutes}/>
+        component: <Links routes={routes} moreRoutes={moreRoutes} description={description}/>
     },
     {
         key: 'projects',
