@@ -10,6 +10,12 @@ export function Links (props) {
     const handleWindows = (url) => {
         window.open(url)
     } 
+    const isNew  = (isNew) => {
+        return (isNew 
+            ? <span className="span__new">new</span>
+            : null
+        )
+    }
 
     return (
         <> 
@@ -19,7 +25,7 @@ export function Links (props) {
                         <img className="img__logo" src="./img/profile.jpg" ></img>
                     </div>
                     <div className = "content __links"> 
-                        <p>@<span className="name">alexandercds</span></p>
+                        <p>@<span className="name">{description.name}</span></p>
                         <p className="box__routes" style={{textAlign: 'justify'}}>
                             {description.main}
                         </p> 
@@ -36,7 +42,7 @@ export function Links (props) {
                         return <a onClick={() => { handleWindows(item.url) }} className="box__routes" key={"route" + index}> 
                             <div className="content__routes">
                                 <img src={item.icon}></img>
-                                <span className="span__routes">{item.name}</span>
+                                <span className="span__routes">{item.name} {isNew(item.isNew)}</span>
                             </div>
                         </a>
                     })}

@@ -294,32 +294,13 @@ a {
 } 
 
 .container__projects .box__projects img {
-  position: relative;
-  max-width: 100px;
-  margin-bottom: 10px;
+  position: relative;  
 }
 
-/*.container__projects .box__projects:nth-child(1) {
-  grid-column: span 2;
-  grid-row: span 1;
+.p_projects { 
+  display: none;
 }
 
-.container__projects .box__projects:nth-child(2) {
-  grid-column: span 1;
-  grid-row: span 2;
-}
-
-.container__projects .box__projects:nth-child(4) {
-  grid-column: span 1;
-  grid-row: span 2;
-}
-
-.container__projects .box__projects:nth-child(4) {
-  grid-column: span 2;
-  grid-row: span 1;
-}*/
-
- 
 /** LINKS **/
 .body__routes {
   display: flex;
@@ -389,6 +370,25 @@ a {
   -webkit-box-reflect: below 5px linear-gradient(
     transparent, rgba(0, 0, 0, 0.2)
   );  
+}
+
+.span__new {
+  display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: red;
+    border-radius: 10px;
+}
+
+.span__new:hover {
+  background-color: rgb(223, 56, 56);
 }
 
 /** About me **/

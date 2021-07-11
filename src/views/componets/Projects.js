@@ -18,7 +18,7 @@ export function Projects (props) {
                     return <a className="box__projects" onClick={() => {handleWindows(item.url)}} key={item.key}>
                         <div className="content__projects">
                             <img className="img__projects" width="250" src={"./img/projects/" + item.img}></img>
-                            <p className="p_projects">{item.description}</p>
+                            <p className="p_projects">{item.description}</p> 
                         </div>
                     </a>
                  })}

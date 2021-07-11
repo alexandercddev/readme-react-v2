@@ -10,6 +10,7 @@ import { Contact } from '../views/componets/Contact';
 import { Links } from '../views/componets/Links';
 
 export const description = {
+    name: "alexandercds",
     main: "Developer frontend y backend lo que muchos conocen como Developer Fullstack con más de 3 años de experiencia en el mundo del desarrollo web." ,
     sub: "Me gusta hacer sitios webs como por ejemplo este sitio el cual está construido con React."
 };
@@ -39,21 +40,30 @@ export const routes = [
         url: 'https://www.instagram.com/alexandercds.cs/?hl=es-la',
         userName: 'alexander_cd',
     },
+    
+];
+
+export const moreRoutes = [ 
     {
         name: 'Twitch',
         icon: './svg/twitch-purple-icon.svg',
         url: 'https://www.twitch.tv/arthurreset',
         userName: 'ArthurReset',
+        isNew: true,
     }, 
-];
-
-export const moreRoutes = [ 
-    
     {
         name: 'Facebook',
         icon: './svg/facebook-icon.svg',
         url: 'https://www.facebook.com/alexandercds.cs',
         userName: 'Alexandercds.cs',
+        isNew: true,
+    },
+    {
+        name: 'Discord',
+        icon: './svg/discord-icon.svg',
+        url: 'https://discord.gg/XBE59Ws4pA',
+        userName: 'CD Devs',
+        isNew: true,
     },
 ];
 
@@ -65,9 +75,10 @@ export const projects = [
         url: 'https://www.mielroche.com.mx/',
     },
     {
-        key: "miel-roched",
-        img: "background.jpg",
-        description: "Desarrollador frontend y backend lo que muchos conocen como",
+        key: "alexandercds",
+        img: "alexandercds.jpg",
+        description: "Sitio web con ReactJS",
+        url: 'https://alexandercd.herokuapp.com/',
     },
     {
         key: "alexandercd-v1",
