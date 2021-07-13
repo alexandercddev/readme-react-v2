@@ -4,19 +4,10 @@
 * @date: 03/Julio/2021
 **/
 import React, { useState } from 'react';  
+import { Link } from './Componets';
 
 export function Links (props) {
     const { routes, moreRoutes, description } = props; 
-    const handleWindows = (url) => {
-        window.open(url)
-    } 
-    const isNew  = (isNew) => {
-        return (isNew 
-            ? <span className="span__new">new</span>
-            : null
-        )
-    }
-
     return (
         <> 
             <div className="body__routes">
@@ -31,20 +22,10 @@ export function Links (props) {
                         </p> 
                     </div>
                     {routes.map((item, index) => {
-                        return <a onClick={() => { handleWindows(item.url) }} className="box__routes" key={"route" + index}> 
-                            <div className="content__routes">
-                                <img src={item.icon}></img>
-                                <span className="span__routes">{item.name}</span>
-                            </div>
-                        </a>
+                        return <Link item={item} index={index}/>
                     })}
                     {moreRoutes.map((item, index) => {
-                        return <a onClick={() => { handleWindows(item.url) }} className="box__routes" key={"route" + index}> 
-                            <div className="content__routes">
-                                <img src={item.icon}></img>
-                                <span className="span__routes">{item.name} {isNew(item.isNew)}</span>
-                            </div>
-                        </a>
+                        return <Link item={item} index={index}/>
                     })}
                 </div>
             </div>

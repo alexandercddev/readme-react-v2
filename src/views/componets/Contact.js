@@ -5,18 +5,7 @@
 **/
 import React, { useState } from 'react'; 
 
-export function Contact (props) {
-    const [active, setActive] = useState(''); 
-    const handleClick = () => {
-        if(active === '')
-            setActive('active')
-        else
-            setActive('')
-    } 
-    const handleWindows = (url) => {
-        window.open(url)
-    } 
-
+export function Contact (props) {  
     return (
         <div className="body__routes">
             <div className="container__routes"> 

@@ -6,9 +6,7 @@
 import React, { useState } from 'react'; 
 
 export function Projects (props) {
-    let {projects} = props;
-    const [active, setActive] = useState(''); 
-    const handleClick = () => { } 
+    let { projects } = props; 
     const handleWindows = (url) => { window.open(url) } 
 
     return (

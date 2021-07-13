@@ -6,18 +6,7 @@
 import React, { useState } from 'react'; 
 
 export function AboutMe (props) {
-    const {description} = props;
-    const [active, setActive] = useState(''); 
-    const handleClick = () => {
-        if(active === '')
-            setActive('active')
-        else
-            setActive('')
-    } 
-    const handleWindows = (url) => {
-        window.open(url)
-    } 
-
+    const {description} = props;  
     return (
         <div className="body__about">
             <div className="container__about"> 
