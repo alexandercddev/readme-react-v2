@@ -7,18 +7,26 @@ import React, { useState } from 'react';
 
 export function Projects (props) {
     let { projects } = props; 
+    const len = projects.length/100;
     const handleWindows = (url) => { window.open(url) } 
 
     return (
         <div className="body">
-            <div className="container__projects"> 
+            <div className="container__projects_v2"> 
                 {projects.map((item, index) => {
-                    return <a className="box__projects" onClick={() => {handleWindows(item.url)}} key={item.key}>
-                        <div className="content__projects">
-                            <img className="img__projects" width="250" src={"./img/projects/" + item.img}></img>
-                            <p className="p_projects">{item.description}</p> 
-                        </div>
-                    </a>
+                    return <div className="projects__card" key={item.key}>
+                        <img 
+                            src={"./img/projects/" + item.img}
+                            onClick={() => {handleWindows(item.urls[0].value)}}
+                            ></img>
+                        <h4 className="projects__title">{item.title}</h4>
+                        <p className="projects__description">{item.description}</p>
+                        <div className="projects__btns">
+                            {item.urls.map((url, index) => { 
+                                return <a className="projects__url" onClick={() => {handleWindows(url.value)}}>{url.text}</a>
+                            })} 
+                        </div> 
+                    </div>
                  })}
             </div>
         </div>

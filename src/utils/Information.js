@@ -71,30 +71,65 @@ export const projects = [
     {
         key: "miel-roche",
         img: "miel-roche.jpg",
-        description: "Sitio web con WordPress y elementor",
-        url: 'https://www.mielroche.com.mx/',
+        title: 'Miel Roche',
+        description: "Sitio web elaborado con CMS WordPress y plugin elementor",
+        urls: [
+            {
+                value: 'https://www.mielroche.com.mx/',
+                text: 'Ir al sitio',
+            }
+        ],
     },
     {
-        key: "alexandercds",
+        key: "alexandercds1",
+        img: "alexandercdsv1.jpg",
+        title: 'Portafolio v1',
+        description: "Sitio web con ReactJS, Material UI,Material Icons, SwetAlert2",
+        urls: [
+            {
+                value: 'https://alexandercds.github.io/readme-react/',
+                text: 'Ir al sitio',
+            },
+            {
+                value: 'https://github.com/AlexanderCDs/readme-react',
+                text: 'Ir al código',
+            }
+        ]
+    },
+    {
+        key: "alexandercds2",
         img: "alexandercds.jpg",
-        description: "Sitio web con ReactJS",
-        url: 'https://alexandercd.herokuapp.com/',
+        title: 'Portafolio v2',
+        description: "Sitio web con ReactJS y CSS",
+        urls: [
+            {
+                value: 'https://alexandercd.herokuapp.com/',
+                text: 'Ir al sitio',
+            },
+            {
+                value: 'https://github.com/AlexanderCDs/readme-react-v2',
+                text: 'Ir al código',
+            } 
+        ]
     },
     {
-        key: "alexandercd-v1",
-        img: "background.jpg",
-        description: "Desarrollador frontend y backend lo que muchos conocen como",
-    },
-    {
-        key: "alexandercd-v21",
-        img: "background.jpg",
-        description: "Desarrollador frontend y backend lo que muchos conocen como",
-    },
-    {
-        key: "miel-roche1",
-        img: "background.jpg",
-        description: "Desarrollador frontend y backend lo que muchos conocen como",
+        key: "sunnyside-agency-landing-page",
+        img: "sunnyside.jpg",
+        title: 'Portafolio v1',
+        description: "Sitio web con ReactJS, ejercicio de FrontEnd Mentor",
+        urls: [
+            {
+                value: 'https://alexandercds.github.io/sunnyside-agency-landing-page/',
+                text: 'Ir al sitio',
+            }, 
+            {
+                value: 'https://github.com/AlexanderCDs/sunnyside-agency-landing-page',
+                text: 'Ir al sitio',
+            }, 
+        ],
     }, 
+    
+    
 ];
 
 export let navigations = [

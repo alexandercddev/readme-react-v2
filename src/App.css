@@ -4,13 +4,14 @@
 * @date: 28/Junio/2021
 **/
 /** Incluido para diseño HOME**/
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
   margin: 0;
   padding:  0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', 'Roboto', sans-serif;
 }
 
 header {
@@ -301,6 +302,73 @@ a {
   display: none;
 }
 
+/** PROYECTS 2 **/
+.projects__title { 
+}
+
+.container__projects_v2 {
+  position: relative;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: minmax(100px, auto);
+  grid-auto-flow: dense;
+  grid-gap: 10px;
+}
+
+.container__projects_v2 .projects__card {
+  width: 330px;
+  height: 430;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
+  overflow: hidden; 
+  text-align: center;
+  transition:  all 0.25s;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: #FFF;
+}
+
+.container__projects_v2 .projects__card:hover { 
+  transform: translateY(-8px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container__projects_v2 .projects__card img {
+  width: 330px;
+  height: 220px;
+  cursor: pointer;
+}
+
+.container__projects_v2 .projects__card h4 {
+  font-weight: 600;
+}
+
+.container__projects_v2 .projects__card p {
+  padding: 0 1rem;
+  font-size: 16px;
+  font-weight: 300;
+  height: 3em;
+}
+
+.container__projects_v2 .projects__card a {
+  font-weight: 500;
+  text-decoration: none;  
+  padding: 0.3em;
+  border-radius: 8px;
+}
+
+.container__projects_v2 .projects__card a:hover {
+  color: rgba(249, 249, 170, 0.5);  
+}
+
+.projects__btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
 /** LINKS **/
 .body__routes {
   display: flex;
@@ -320,6 +388,7 @@ a {
 }
 
 .container__routes .box__routes {
+  border-radius: 8px;
   cursor: pointer;
   grid-column: unset !important;
   grid-row: unset !important;
@@ -333,6 +402,8 @@ a {
 
 .container__routes .box__routes:hover { 
   background: rgb(249, 249, 170, 0.5);  
+  transform: translateY(-8px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 } 
 
 .container__routes .box__routes img { 
@@ -410,6 +481,7 @@ a {
 }
 
 .container__about .box__about {  
+  border-radius: 8px;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);

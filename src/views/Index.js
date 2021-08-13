@@ -6,6 +6,7 @@
 import React, { useState } from 'react'; 
 import { useParams } from 'react-router-dom';
 import Axios from 'axios';
+import { Router, Route, browserHistory } from 'react-router';
 import * as Constants from '../utils/Information';
 
 
@@ -41,7 +42,7 @@ export function Portfolio (props) {
                 >
                 <header>
                     <a onClick={() => {handleContent(0)}} className="logo" >
-                        <img className="img__logo__banner" src="./img/logo.png" ></img>
+                        <img className="img__logo__banner" src="./img/profile.jpg" ></img>
                     </a>
                     <div id="toggle" onClick={handleClick}>
                         <div className="toggle__md"></div>
