@@ -11,6 +11,7 @@ import { Links } from '../views/componets/Links';
 
 export const description = {
     name: "alexandercds",
+    title: 'Bienvenido...',
     main: "Developer frontend y backend lo que muchos conocen como Developer Fullstack con más de 3 años de experiencia en el mundo del desarrollo web." ,
     sub: "Me gusta hacer sitios webs como por ejemplo este sitio el cual está construido con React."
 };
@@ -115,7 +116,7 @@ export const projects = [
     {
         key: "sunnyside-agency-landing-page",
         img: "sunnyside.jpg",
-        title: 'Portafolio v1',
+        title: 'Sunnyside Agency',
         description: "Sitio web con ReactJS, ejercicio de FrontEnd Mentor",
         urls: [
             {
@@ -124,7 +125,7 @@ export const projects = [
             }, 
             {
                 value: 'https://github.com/AlexanderCDs/sunnyside-agency-landing-page',
-                text: 'Ir al sitio',
+                text: 'Ir al código',
             }, 
         ],
     }, 
