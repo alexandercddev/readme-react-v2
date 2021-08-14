@@ -318,7 +318,7 @@ a {
 
 .container__projects_v2 .projects__card {
   width: 330px;
-  height: 430;
+  height: 335px;
   border-radius: 8px;
   box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
   overflow: hidden; 
@@ -624,6 +624,10 @@ a {
 
   .box__contact { 
     width: 100%; 
+  }
+   
+  .container__projects_v2 .projects__card {
+    width: 90% !important; 
   }
 }
  
