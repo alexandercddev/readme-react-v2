@@ -132,6 +132,15 @@ export const projects = [
     
 ];
 
+export const contact = {
+    file: 'contacto.js',
+    name: 'Alexander Chi',
+    email: 'arturochi2@hotmail.com',
+    job: 'WebDeveloper',
+    resume: 'https://drive.google.com/file/d/13bfMZafxHaAN-5YJaVESYsp-o1dizq7l/view?usp=sharing',
+    nameResume: '/anexos/cv.pdf',
+}
+
 export let navigations = [
     {
         key: 'home', 
@@ -156,7 +165,7 @@ export let navigations = [
     {
         key: 'contact',
         name: 'Contacto',   
-        component: <Contact/>
+        component: <Contact contact={contact}/>
     },
     /*{
         key: 'language',

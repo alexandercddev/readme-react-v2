@@ -6,6 +6,7 @@
 /** Incluido para diseño HOME**/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
 * {
   margin: 0;
@@ -511,9 +512,8 @@ a {
 
 .body__contact {
   display: flex;
-  justify-content: center;
-  align-self: center;
-  min-width: 100%;   
+  justify-content: center; 
+  min-width: 100%;    
 }
 
 .container__contact {
@@ -528,10 +528,10 @@ a {
 }
 
 .box__contact {
-  display: flex;
-  width: 80%;
+  display: flex; 
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+  border-radius: 10px; 
 }
 
 .img__contact {
@@ -543,6 +543,89 @@ a {
   display: flex;
   justify-content: center;
   padding-bottom: 1em;
+}
+
+/** Card contact **/
+.card__container {
+  display: flex; 
+  flex-direction: column;
+  background-color: #070708;
+  border-radius: 15px;
+  color: #FFF;
+  margin: 1em;
+  padding: 1.5em;
+  opacity: 0.9;
+  font-size: x-large;
+}
+
+.card__header { 
+  display: flex;
+  flex-direction: row;
+  color: #909090;
+}
+
+.card__options {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  width: 15%;
+}
+
+.card__circule {
+  width: 15px;
+  height: 15px;
+  background-color: #393939;
+  border-radius: 50%;  
+}
+
+.card__name {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em;
+  font-family: 'Inter'; 
+}
+
+.color__green {
+  color: #69CB96;
+}
+
+.color__blue {
+  color: #127A9B;
+}
+
+.color__rose {
+  color: #EA5D8F;
+}
+
+.color__yellow {
+  color: #CBC169;
+}
+
+.color__yellow a {
+  color: #127A9B;
+  text-decoration-line: underline;
+}
+
+.color__yellow a:hover {
+  color: #54b2cf; 
+}
+
+.card__margin_1 {
+  margin-left: 30px;
+}
+
+.card__margin_2 {
+  margin-left: 65px;
+}
+
+.card__export {
+  margin-bottom: 2em;  
 }
 
 
@@ -628,6 +711,29 @@ a {
    
   .container__projects_v2 .projects__card {
     width: 90% !important; 
+  } 
+  .card__container { 
+    font-size: medium;
   }
 }
  
+@media (max-width: 360px) { 
+  .card__container { 
+    font-size: x-small;
+  } 
+
+  .card__circule {
+    width: 7px;
+    height: 7px;
+    background-color: #393939;
+    border-radius: 50%;  
+  }
+
+  .card__margin_1 {
+    margin-left: 25px;
+  }
+  
+  .card__margin_2 {
+    margin-left: 40px;
+  }
+}
