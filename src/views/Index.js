@@ -42,7 +42,7 @@ export function Portfolio (props) {
                 >
                 <header>
                     <a onClick={() => {handleContent(0)}} className="logo" >
-                        <img className="img__logo__banner" src="./img/profile.jpg" ></img>
+                        <img alt="Logo porfile" className="img__logo__banner" src="./img/profile.jpg" ></img>
                     </a>
                     <div id="toggle" onClick={handleClick}>
                         <div className="toggle__md"></div>
@@ -54,7 +54,7 @@ export function Portfolio (props) {
                         {Constants.routes.map((item, index) => {
                             return (<li key={'icon' + index}>
                                 <a onClick={() => { handleWindows(item.url, index) }}>
-                                    <img width="35" src={item.icon}></img>
+                                    <img alt={'icon' + index} width="35" src={item.icon}></img>
                                 </a>
                             </li>)
                         })}

@@ -13,7 +13,7 @@ export function Links (props) {
             <div className="body__routes">
                 <div className="container__routes"> 
                     <div className="content__logo">
-                        <img className="img__logo" src="./img/profile.jpg" ></img>
+                        <img alt="Logo" className="img__logo" src="./img/profile.jpg" ></img>
                     </div>
                     <div className = "content __links"> 
                         <p>@<span className="name">{description.name}</span></p>

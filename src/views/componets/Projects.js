@@ -16,6 +16,7 @@ export function Projects (props) {
                 {projects.map((item, index) => {
                     return <div className="projects__card" key={item.key}>
                         <img 
+                            alt={item.key} 
                             src={"./img/projects/" + item.img}
                             onClick={() => {handleWindows(item.urls[0].value)}}
                             ></img>

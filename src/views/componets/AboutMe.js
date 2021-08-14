@@ -23,7 +23,7 @@ export function AboutMe (props) {
                 </div>
                 <div className="box__about">
                     <div className="content__about"> 
-                        <img className="img__about" src="./img/profile.jpg" ></img>
+                        <img alt="Foto Alexander" className="img__about" src="./img/profile.jpg" ></img>
                     </div>
                 </div>
             </div>

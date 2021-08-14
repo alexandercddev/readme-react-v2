@@ -21,7 +21,7 @@ export function Link (props) {
         <> 
             <a onClick={() => { handleWindows(item.url) }} className="box__routes" key={"route" + index}> 
                 <div className="content__routes">
-                    <img src={item.icon}></img>
+                    <img alt={item.name} src={item.icon}></img>
                     <span className="span__routes">{item.name} {isNew(item.isNew)}</span>
                 </div>
             </a>
