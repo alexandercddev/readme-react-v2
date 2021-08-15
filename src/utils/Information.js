@@ -12,7 +12,7 @@ import { Links } from '../views/componets/Links';
 export const description = {
     name: "alexandercds",
     title: 'Bienvenido...',
-    main: "Developer frontend y backend lo que muchos conocen como Developer Fullstack con más de 3 años de experiencia en el mundo del desarrollo web." ,
+    main: "Desarrollador frontend y backend lo que muchos conocen como desarrollador Fullstack con más de 3 años de experiencia en el mundo del desarrollo web." ,
     sub: "Me gusta hacer sitios webs como por ejemplo este sitio el cual está construido con React."
 };
 

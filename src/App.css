@@ -76,7 +76,7 @@ header #toggle::after {
 
 .banner {
   position: relative;
-  width:  100%;
+  width: 100%;
   min-height: 100vh;
   padding: 100px; 
   /*background-image: url("./img/background.jpg");*/
@@ -85,6 +85,18 @@ header #toggle::after {
   align-items: center;
   transition: 0.5s;
   z-index: 2;
+}
+
+.banner::after {
+  content: " ";
+  height: 100vh !important;
+  width: 100vw !important;
+  background-color: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(5px);
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  right: 0;
 }
 
 .banner.active header #toggle::before {
@@ -155,9 +167,7 @@ header #toggle::after {
 }
 
 #navigation ul li a:hover { 
-  width:  100%;
-  height: 2px;
-  background: #FFF;
+  text-decoration-line: underline;
 }
 
 a {

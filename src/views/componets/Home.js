@@ -15,7 +15,7 @@ export function Home (props) {
                     return <span style={{'--i': index+1}} key={'b'+index}>{caracter}</span>
                 })} 
                 </h2> 
-                <h2>I'm <span className="name">Alexander Chi</span></h2>
+                <h2>Hola, soy <span className="name">Alexander Chi</span></h2>
                 <p>
                     {description.main}
                 </p> 
