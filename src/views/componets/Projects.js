@@ -4,9 +4,10 @@
 * @date: 30/Junio/2021
 **/
 import React, { useState } from 'react'; 
+import * as Constants from '../../utils/Information'; 
 
 export function Projects (props) {
-    let { projects } = props; 
+    let { projects } = Constants; 
     const len = projects.length/100;
     const handleWindows = (url) => { window.open(url) } 
 

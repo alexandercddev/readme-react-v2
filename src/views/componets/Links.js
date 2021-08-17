@@ -4,10 +4,11 @@
 * @date: 03/Julio/2021
 **/
 import React, { useState } from 'react';  
-import { Link } from './Componets';
+import { Link, SocialMedial } from './Componets';
+import * as Constants from '../../utils/Information'; 
 
 export function Links (props) {
-    const { routes, moreRoutes, description } = props; 
+    const { routes, moreRoutes, description } = Constants; 
     return (
         <> 
             <div className="body__routes">
@@ -22,10 +23,10 @@ export function Links (props) {
                         </p> 
                     </div>
                     {routes.map((item, index) => {
-                        return <Link item={item} index={index}/>
+                        return <Link key={'link' + index} item={item} index={index}/>
                     })}
                     {moreRoutes.map((item, index) => {
-                        return <Link item={item} index={index}/>
+                        return <Link key={'link' + index} item={item} index={index}/>
                     })}
                 </div>
             </div>

@@ -1,17 +1,15 @@
 /** 
 * @author: Alexander Chi
 * @description:
-* @date: 03/Julio/2021
+* @date: 116/Agosto/2021
 **/
-import React, { useState } from 'react'; 
-import * as Constants from '../../utils/Information'; 
-import { SocialMedial } from './Componets';
+import React, { useState } from 'react';  
+import { Link } from 'react-router-dom'; 
 
-export function Contact (props) {  
-    const {contact, routes} = Constants
+export function NotFound (props) { 
     const handleWindows = (url) => { window.open(url) } 
 
-    return (<>
+    return (
         <div className="body__contact">
             <div className="container__contact"> 
                 <div className="box__contact">
@@ -24,17 +22,17 @@ export function Contact (props) {
                                     <div className="card__circule"> </div> 
                                 </div>
                                 <div className="card__name">
-                                    {contact.file}
+                                    P-404.js
                                 </div>
                             </div>
                             <div className="card__content">
                                 <div className="card__export"> <span className="color__green">module</span>.<span className="color__blue">export</span><span> = </span><span  className="color__green"> Portafolio</span>; </div>
-                                <div> <span className="color__rose">funtion </span><span className="color__green">CardFormat</span>() {'{'} </div>
+                                <div> <span className="color__rose">funtion </span><span className="color__green">NotFound</span>() {'{'} </div>
                                 <div className="card__margin_1"> <span className="color__rose">return </span> {'{'} </div>
-                                <div className="card__margin_2"> <span className="color__blue">name</span>: <span className="color__yellow">'{contact.name}'</span>, </div>
-                                <div className="card__margin_2"> <span className="color__blue">email</span>: <span className="color__yellow">'{contact.email}'</span>, </div>
-                                <div className="card__margin_2"> <span className="color__blue">job</span>: <span className="color__yellow">'{contact.job}'</span>, </div>
-                                <div className="card__margin_2"> <span className="color__blue">resume</span>: <span className="color__yellow">'<a onClick={() => {handleWindows(contact.resume)}}>{contact.nameResume}</a>'</span>, </div>
+                                <div className="card__margin_2"> <span className="color__blue">code</span>: <span className="color__yellow">'404'</span>, </div>
+                                <div className="card__margin_2"> <span className="color__blue">title</span>: <span className="color__yellow">'Ocurrió un error'</span>, </div>
+                                <div className="card__margin_2"> <span className="color__blue">message</span>: <span className="color__yellow">'Página no encontrada'</span>, </div>
+                                <div className="card__margin_2"> <span className="color__blue">go</span>: <span className="color__yellow">'<Link to="/">alexandercds.dev/home</Link>'</span>, </div>
                                 <div className="card__margin_1"> {'};'} </div>
                                 <div> {'}'} </div>
                             </div>
@@ -43,8 +41,7 @@ export function Contact (props) {
                 </div> 
             </div>
         </div>
-        <SocialMedial routes={routes}></SocialMedial>
-    </>);
+    );
 }
 
-export default Contact;
+export default NotFound;

@@ -3,11 +3,13 @@
 * @description:
 * @date: 03/Julio/2021
 **/
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';  
+import * as Constants from '../../utils/Information'; 
+import { SocialMedial } from './Componets';
 
 export function AboutMe (props) {
-    const {description} = props;  
-    return (
+    const {description, routes} = Constants;  
+    return (<>
         <div className="body__about">
             <div className="container__about"> 
                 <div className="box__about">
@@ -28,7 +30,8 @@ export function AboutMe (props) {
                 </div>
             </div>
         </div>
-    );
+        <SocialMedial routes={routes}></SocialMedial>
+    </>);
 }
 
 export default AboutMe;

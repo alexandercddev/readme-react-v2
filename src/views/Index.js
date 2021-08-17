@@ -3,32 +3,31 @@
 * @description:
 * @date: 28/Junio/2021
 **/
-import React, { useState } from 'react'; 
-import { useParams } from 'react-router-dom';
-import Axios from 'axios';
-import { Router, Route, browserHistory } from 'react-router';
-import * as Constants from '../utils/Information';
-
+import React, { useState } from 'react';  
+import { Link } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom'; 
+import * as Constants from '../utils/Information'; 
+import { Home } from './componets/Home';
+import { Projects } from './componets/Projects';
+import { AboutMe } from './componets/AboutMe';
+import { Contact } from './componets/Contact';
+import { Links } from './componets/Links';
+import { NotFound } from './componets/NotFound'; 
 
 export function Portfolio (props) { 
-    const pathName = window.location.pathname;
-    const [active, setActive] = useState(''); 
-    const [viewActive, setViewActive] = useState(pathName === '/links' ? Constants.navigations[2] : Constants.navigations[0]);
-    const [socialMedial, setSocialMedial] = useState(pathName !== '/links'); 
+    const {navigations, routes} = Constants; 
+    const [active, setActive] = useState('');  
+    const [socialMedial, setSocialMedial] = useState(true); 
     const handleClick = () => {
-        if(active === '')
-            setActive('active');
-        else
-            setActive('');
+        if(active === '') setActive('active');
+        else setActive('');
     } 
-    const handleWindows = (url, index) => {
-        window.open(url);
-    } 
+    const handleWindows = (url, index) => window.open(url); 
     const handleContent = (index) => { 
-        const { key } = Constants.navigations[index];
-        setViewActive(Constants.navigations[index]);
+        console.info(navigations[index])
+        const { key } = navigations[index]; 
         setActive('');
-        setSocialMedial( key !== 'routes' && key !== 'projects'  );
+        setSocialMedial( key !== 'routes' && key !== 'projects' && key !== 'links');
     }
 
     return (
@@ -37,37 +36,35 @@ export function Portfolio (props) {
                 className={'banner ' + active} 
                 id="sec" 
                 style={{
-                    backgroundImage: `url("./img/${viewActive.background ?? "background.jpg"}")` 
+                    backgroundImage: `url("./img/background.jpg")` 
                 }}
                 >
                 <header>
-                    <a onClick={() => {handleContent(0)}} className="logo" >
+                    <Link to="/" onClick={() => {handleContent(0)}} className="logo" >
                         <img alt="Logo porfile" className="img__logo__banner" src="./img/profile.jpg" ></img>
-                    </a>
+                    </Link>
                     <div id="toggle" onClick={handleClick}>
                         <div className="toggle__md"></div>
                     </div>
                 </header>
-                {viewActive.component}
-                {socialMedial && (
-                    <ul className="social__medial">
-                        {Constants.routes.map((item, index) => {
-                            return (<li key={'icon' + index}>
-                                <a onClick={() => { handleWindows(item.url, index) }}>
-                                    <img alt={'icon' + index} width="35" src={item.icon}></img>
-                                </a>
-                            </li>)
-                        })}
-                    </ul>
-                )}
+                <Switch>
+                    <Route exact path="/" component={Home}></Route>
+                    <Route exact path="/home" component={Home}></Route>
+                    <Route exact path="/projects" component={Projects}></Route>
+                    <Route exact path="/about-me" component={AboutMe}></Route>
+                    <Route exact path="/contact" component={Contact}></Route>
+                    <Route exact path="/links" component={Links}></Route>
+                    <Route exact path="/routes" component={Links}></Route>
+                    <Route component={NotFound}></Route>
+                </Switch> 
             </section>
             <div id="navigation" className={active}>
                 <ul>
-                    {Constants.navigations.map((item, index) => {
-                        return (<li key={item.key}>
-                            <a onClick={() => { handleContent(index) }}>
+                    {navigations.map((item, index) => {
+                        return (<li key={item.key + index}>
+                            <Link to={"/" + item.key} onClick={() => { handleContent(index) }}>
                                 {item.name}
-                            </a>
+                            </Link>
                         </li>)
                     })}
                 </ul>

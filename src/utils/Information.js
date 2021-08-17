@@ -2,12 +2,7 @@
 * @author: Alexander Chi
 * @description:
 * @date: 28/Junio/2021
-**/
-import { Home } from '../views/componets/Home';
-import { Projects } from '../views/componets/Projects';
-import { AboutMe } from '../views/componets/AboutMe';
-import { Contact } from '../views/componets/Contact';
-import { Links } from '../views/componets/Links';
+**/ 
 
 export const description = {
     name: "alexandercds",
@@ -64,6 +59,13 @@ export const moreRoutes = [
         icon: './svg/discord-icon.svg',
         url: 'https://discord.gg/XBE59Ws4pA',
         userName: 'CD Devs',
+        isNew: true,
+    },
+    {
+        name: 'Twitter',
+        icon: './svg/twitter-icon.svg',
+        url: 'https://twitter.com/alexandercddev',
+        userName: 'alexandercddev',
         isNew: true,
     },
 ];
@@ -145,28 +147,28 @@ export const contact = {
 export let navigations = [
     {
         key: 'home', 
-        name: 'Home',  
-        component: <Home description={description}/>
+        name: 'Home',   
+        /*component: <Home description={description}/>*/
     },
     {
         key: 'about-me',
         name: 'Sobre mí', 
-        component: <AboutMe description={description} />  
+        /*component: <AboutMe description={description} />  */
     },
     {
         key: 'routes',
         name: 'Links', 
-        component: <Links routes={routes} moreRoutes={moreRoutes} description={description}/>
+        /*component: <Links routes={routes} moreRoutes={moreRoutes} description={description}/>*/
     },
     {
         key: 'projects',
         name: 'Proyectos',  
-        component: <Projects projects = {projects}/>
+        /*component: <Projects projects = {projects}/>*/
     },
     {
         key: 'contact',
         name: 'Contacto',   
-        component: <Contact contact={contact}/>
+        /*component: <Contact contact={contact}/>*/
     },
     /*{
         key: 'language',
@@ -186,3 +188,4 @@ export let navigations = [
     },*/
 ];
 
+export default description;
