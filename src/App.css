@@ -505,9 +505,15 @@ a {
   transition: 0.5s;
 }
 
+.content__about {
+  display: flex;
+  flex-direction: column;
+}
+
 .p__about {
   padding: 1.2em;
   text-align: justify;
+  display: flex; 
 }
 
 .img__about {
