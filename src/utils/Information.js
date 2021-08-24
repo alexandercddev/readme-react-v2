@@ -3,6 +3,16 @@
 * @description:
 * @date: 28/Junio/2021
 **/ 
+import React, { lazy } from 'react';
+import tiktok from '../assets/svg/tiktok-icon.svg';
+import youtube from '../assets/svg/youtube-icon.svg';
+import github from '../assets/svg/github-icon.svg';
+import instagram from '../assets/svg/instagram-icon.svg';
+import twitch from '../assets/svg/twitch-purple-icon.svg';
+import facebook from '../assets/svg/facebook-icon.svg';
+import discord from '../assets/svg/discord-icon.svg';
+import twitter from '../assets/svg/twitter-icon.svg';
+
 
 export const description = {
     name: "alexandercds",
@@ -14,25 +24,25 @@ export const description = {
 export const routes = [
     {
         name: 'Tiktok',
-        icon: './svg/tiktok-icon.svg',
+        icon: tiktok,
         url: 'https://www.tiktok.com/@alexandercds?',
         userName: 'alexandercds',
     },
     {
         name: 'YouTube',
-        icon: './svg/youtube-icon.svg',
+        icon: youtube,
         url: 'https://www.youtube.com/channel/UCmXXKj2lTr8J1zh3KCTj2XQ?sub_confirmation=1',
         userName: 'Alexander CDs',
     },
     {
         name: 'Github',
-        icon: './svg/github-icon.svg',
+        icon: github,
         url: 'https://github.com/AlexanderCDs',
         userName: 'AlexanderCDs',
     }, 
     {
         name: 'Instagram',
-        icon: './svg/instagram-icon.svg',
+        icon: instagram,
         url: 'https://www.instagram.com/alexandercds.cs/?hl=es-la',
         userName: 'alexander_cd',
     },
@@ -42,28 +52,28 @@ export const routes = [
 export const moreRoutes = [ 
     {
         name: 'Twitch',
-        icon: './svg/twitch-purple-icon.svg',
+        icon: twitch,
         url: 'https://www.twitch.tv/arthurreset',
         userName: 'ArthurReset',
         isNew: true,
     }, 
     {
         name: 'Facebook',
-        icon: './svg/facebook-icon.svg',
+        icon: facebook,
         url: 'https://www.facebook.com/alexandercds.cs',
         userName: 'Alexandercds.cs',
         isNew: true,
     },
     {
         name: 'Discord',
-        icon: './svg/discord-icon.svg',
+        icon: discord,
         url: 'https://discord.gg/XBE59Ws4pA',
         userName: 'CD Devs',
         isNew: true,
     },
     {
         name: 'Twitter',
-        icon: './svg/twitter-icon.svg',
+        icon: twitter,
         url: 'https://twitter.com/alexandercddev',
         userName: 'alexandercddev',
         isNew: true,

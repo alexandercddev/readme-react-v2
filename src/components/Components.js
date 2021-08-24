@@ -37,7 +37,7 @@ export function SocialMedial(props) {
             {routes.map((item, index) => { 
                 return (<li key={'icon' + index}>
                     <a onClick={() => { handleWindows(item.url, index) }}>
-                        <img alt={'icon' + index} width="35" src={item.icon}></img>
+                        <img alt={'icon' + index} width="35" height="35" src={item.icon}></img>
                     </a>
                 </li>)
             })}

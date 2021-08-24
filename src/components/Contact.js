@@ -4,8 +4,8 @@
 * @date: 03/Julio/2021
 **/
 import React, { useState } from 'react'; 
-import * as Constants from '../../utils/Information'; 
-import { SocialMedial } from './Componets';
+import * as Constants from '../utils/Information'; 
+import { SocialMedial } from './Components';
 
 export function Contact (props) {  
     const {contact, routes} = Constants

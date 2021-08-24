@@ -4,7 +4,7 @@
 * @date: 30/Junio/2021
 **/
 import React, { useState } from 'react'; 
-import * as Constants from '../../utils/Information'; 
+import * as Constants from '../utils/Information'; 
 
 export function Projects (props) {
     let { projects } = Constants; 

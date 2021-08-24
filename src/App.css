@@ -79,7 +79,7 @@ header #toggle::after {
   width: 100%;
   min-height: 100vh;
   padding: 100px; 
-  /*background-image: url("./img/background.jpg");*/
+  background-image: url("./assets/img/background.jpg");
   background-size: cover;
   display: flex;
   align-items: center;
@@ -448,6 +448,7 @@ a {
 
 .img__logo__banner { 
   width: 35px;
+  height: 35px;
   border-radius: 5em;  
   -webkit-box-reflect: below 5px linear-gradient(
     transparent, rgba(0, 0, 0, 0.2)

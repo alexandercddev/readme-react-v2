@@ -4,8 +4,9 @@
 * @date: 03/Julio/2021
 **/
 import React, { useState } from 'react';  
-import * as Constants from '../../utils/Information'; 
-import { SocialMedial } from './Componets';
+import * as Constants from '../utils/Information'; 
+import { SocialMedial } from './Components';
+import profile from '../assets/img/profile.jpg';
 
 export function AboutMe (props) {
     const {description, routes} = Constants;  
@@ -25,7 +26,7 @@ export function AboutMe (props) {
                 </div>
                 <div className="box__about">
                     <div className="content__about"> 
-                        <img alt="Foto Alexander" className="img__about" src="./img/profile.jpg" ></img>
+                        <img alt="Foto Alexander" className="img__about" src={profile}></img>
                     </div>
                 </div>
             </div>

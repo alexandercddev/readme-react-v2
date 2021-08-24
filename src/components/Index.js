@@ -7,12 +7,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Route, Switch } from 'react-router-dom'; 
 import * as Constants from '../utils/Information'; 
-import { Home } from './componets/Home';
-import { Projects } from './componets/Projects';
-import { AboutMe } from './componets/AboutMe';
-import { Contact } from './componets/Contact';
-import { Links } from './componets/Links';
-import { NotFound } from './componets/NotFound'; 
+import { Home } from './Home';
+import { Projects } from './Projects';
+import { AboutMe } from './AboutMe';
+import { Contact } from './Contact';
+import { Links } from './Links';
+import { NotFound } from './NotFound';
+import porfile from '../assets/img/profile.jpg';
 
 export function Portfolio (props) { 
     const {navigations, routes} = Constants; 
@@ -34,14 +35,10 @@ export function Portfolio (props) {
         <>
             <section 
                 className={'banner ' + active} 
-                id="sec" 
-                style={{
-                    backgroundImage: `url("./img/background.jpg")` 
-                }}
-                >
+                id="sec"  >
                 <header>
                     <Link to="/" onClick={() => {handleContent(0)}} className="logo" >
-                        <img alt="Logo porfile" className="img__logo__banner" src="./img/profile.jpg" ></img>
+                        <img alt="Logo porfile" className="img__logo__banner" src={porfile}></img>
                     </Link>
                     <div id="toggle" onClick={handleClick}>
                         <div className="toggle__md"></div>
