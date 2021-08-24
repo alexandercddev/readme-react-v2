@@ -12,6 +12,11 @@ import twitch from '../assets/svg/twitch-purple-icon.svg';
 import facebook from '../assets/svg/facebook-icon.svg';
 import discord from '../assets/svg/discord-icon.svg';
 import twitter from '../assets/svg/twitter-icon.svg';
+import miel from '../assets/img/projects/miel-roche.jpg';
+import alexandercd1 from '../assets/img/projects/alexandercdsv1.jpg';
+import alexandercd2 from '../assets/img/projects/alexandercds.jpg';
+import sunnyside from '../assets/img/projects/sunnyside.jpg';
+import blogr from '../assets/img/projects/blogr-landing-page.jpg';
 
 
 export const description = {
@@ -83,7 +88,7 @@ export const moreRoutes = [
 export const projects = [
     {
         key: "miel-roche",
-        img: "miel-roche.jpg",
+        img: miel,
         title: 'Miel Roche',
         description: "Sitio web elaborado con CMS WordPress y plugin elementor",
         urls: [
@@ -95,7 +100,7 @@ export const projects = [
     },
     {
         key: "alexandercds1",
-        img: "alexandercdsv1.jpg",
+        img: alexandercd1,
         title: 'Portafolio v1',
         description: "Sitio web con ReactJS, Material UI,Material Icons, SwetAlert2",
         urls: [
@@ -111,7 +116,7 @@ export const projects = [
     },
     {
         key: "alexandercds2",
-        img: "alexandercds.jpg",
+        img: alexandercd2,
         title: 'Portafolio v2',
         description: "Sitio web con ReactJS y CSS",
         urls: [
@@ -127,7 +132,7 @@ export const projects = [
     },
     {
         key: "sunnyside-agency-landing-page",
-        img: "sunnyside.jpg",
+        img: sunnyside,
         title: 'Sunnyside Agency',
         description: "Sitio web con ReactJS, ejercicio de FrontEnd Mentor",
         urls: [
@@ -142,7 +147,22 @@ export const projects = [
         ],
     }, 
     
-    
+    {
+        key: "blogr-landing-page",
+        img: blogr,
+        title: 'Blogr Landing',
+        description: "Sitio web con ReactJS, ejercicio de FrontEnd Mentor",
+        urls: [
+            {
+                value: 'https://alexandercds.github.io/blogr-landing-page/',
+                text: 'Ir al sitio',
+            }, 
+            {
+                value: 'https://github.com/AlexanderCDs/blogr-landing-page',
+                text: 'Ir al código',
+            }, 
+        ],
+    },
 ];
 
 export const contact = {

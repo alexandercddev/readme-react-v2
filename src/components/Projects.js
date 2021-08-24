@@ -18,7 +18,7 @@ export function Projects (props) {
                     return <div className="projects__card" key={item.key}>
                         <img 
                             alt={item.key} 
-                            src={"./img/projects/" + item.img}
+                            src={item.img}
                             onClick={() => {handleWindows(item.urls[0].value)}}
                             ></img>
                         <h4 className="projects__title">{item.title}</h4>
