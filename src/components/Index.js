@@ -25,8 +25,7 @@ export function Portfolio (props) {
         else setActive('');
     } 
     const handleWindows = (url, index) => window.open(url); 
-    const handleContent = (index) => { 
-        console.info(navigations[index])
+    const handleContent = (index) => {  
         const { key } = navigations[index]; 
         setActive('');
         setSocialMedial( key !== 'routes' && key !== 'projects' && key !== 'links');

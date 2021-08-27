@@ -45,35 +45,44 @@ export function SocialMedial(props) {
     );
 }
 
-export function Technology (props) {
-    const [progress, setProgress] = useState(0); 
+const ProgressBar = ({ progress, name, color}) => {
+    const [value, setValue] = useState(0);
+    const [number, setNumber] = useState(0);
+    const load = () => {
+        while (value < progress) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => { 
+                    setValue(value + 1)
+                    resolve(value); 
+                }, 50);
+            }).then(res => res);
+        } 
+    }
+    load();
+    return (
+        <>
+            <span className="span__routes">{`${name} ${value}%`}</span>
+            <div 
+            className={`technology__progress progress-bar-striped color__${color}`}
+            style={{width: `${value}%`}}>
+
+            </div>
+        </> 
+    );
+}
+
+export function Technology (props) { 
     const { item, index } = props; 
     const handleWindows = (url) => {
         window.open(url)
     } 
-    const isNew  = (isNew) => (isNew ? <span className="span__new">new</span> : null) 
-    const load = (value) => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(value + 1); 
-            }, 500);
-        }).then(res => res);
-    } 
-    const loading = async (value) => {  
-        console.info(value)
-        while (progress < value) {
-            setProgress(await load(progress)) 
-        }  
-    }
-    //loading(item.value);
+    const isNew = (isNew) => (!isNew ? <span className="span__new">new</span> : null) 
+    
     return (
         <div className="box__routes">
             <img className="technology__img" alt={item.name} src={item.src}></img>
-            <div className="technology__content">
-                <span className="span__routes">{item.name + ' ' + item.value + '%'} {isNew(item.isNew)}</span>
-                <div 
-                    className="technology__progress progress-bar-striped" 
-                    style={{'--progress': item.value + '%'}}></div>
+            <div className="technology__content"> 
+                <ProgressBar progress={item.value} name={item.name} color={item.color}/>
             </div>
         </div>
     );

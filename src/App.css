@@ -678,10 +678,30 @@ a {
   text-align: center;
   white-space: nowrap;
   background-color: #0d6efd;
-  transition: width .6s cubic-bezier(1, 0, 0.25, 1);
+  transition: width 0.5s ;
   border-radius: 30px; 
    
 }
+
+.technology__content>.technology__progress.color__green {
+  background-color: #69CB96;
+}
+
+.technology__content>.technology__progress.color__blue {
+  background-color: #127A9B;
+}
+
+.technology__content>.technology__progress.color__rose {
+  background-color: #EA5D8F;
+}
+
+.technology__content>.technology__progress.color__yellow {
+  background-color: #CBC169;
+}
+
+.technology__content>.technology__progress.color__yellow a {
+  background-color: #127A9B; 
+} 
 
 .progress-bar-striped {
   background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);

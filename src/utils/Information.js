@@ -233,42 +233,44 @@ export const technologies = [
     {
         name: 'JavaScript',
         value: 90,
-        src: javaScript
+        src: javaScript, 
     },
     {
         name: 'NodeJS',
         value: 70,
-        src: nodejs
+        src: nodejs, 
     },
     {
         name: 'ReactJS',
         value: 80,
-        src: react
+        src: react, 
     },
     {
         name: 'JQuery',
         value: 90,
-        src: jquery
+        src: jquery, 
     },
     /*{
         name: 'CSharp',
         value: 90,
-        src: react
+        src: react,
+        color: 'rose'
     },
     {
         name: 'SQL Server',
         value: 80,
-        src: null
+        src: null,
+        color: 'rose'
     },*/
     {
         name: 'ServiceLayer (SAP B1)',
         value: 55,
-        src: sap
+        src: sap, 
     },
     {
         name: 'DI API (SAP B1)',
         value: 55,
-        src: sap
+        src: sap, 
     },
 ];
 
