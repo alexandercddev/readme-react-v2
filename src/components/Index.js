@@ -13,6 +13,7 @@ import { AboutMe } from './AboutMe';
 import { Contact } from './Contact';
 import { Links } from './Links';
 import { NotFound } from './NotFound';
+import { Technologies } from './Technologies';
 import porfile from '../assets/img/profile.jpg';
 
 export function Portfolio (props) { 
@@ -52,6 +53,7 @@ export function Portfolio (props) {
                     <Route exact path="/contact" component={Contact}></Route>
                     <Route exact path="/links" component={Links}></Route>
                     <Route exact path="/routes" component={Links}></Route>
+                    <Route exact path="/technologies" component={Technologies}></Route>
                     <Route component={NotFound}></Route>
                 </Switch> 
             </section>

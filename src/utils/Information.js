@@ -17,7 +17,13 @@ import alexandercd1 from '../assets/img/projects/alexandercdsv1.jpg';
 import alexandercd2 from '../assets/img/projects/alexandercds.jpg';
 import sunnyside from '../assets/img/projects/sunnyside.jpg';
 import blogr from '../assets/img/projects/blogr-landing-page.jpg';
-
+import javaScript from '../assets/svg/javascript-icon.svg';
+import nodejs from '../assets/svg/nodejs-icon.svg';
+import react from '../assets/svg/react-icon.svg';
+import jquery from '../assets/svg/jquery-icon.svg';
+import sap from '../assets/svg/sap-icon.svg';
+/*import  from '../assets/svg/.svg';
+import  from '../assets/svg/.svg';*/
 
 export const description = {
     name: "alexandercds",
@@ -174,7 +180,7 @@ export const contact = {
     nameResume: '/anexos/cv.pdf',
 }
 
-export let navigations = [
+export const navigations = [
     {
         key: 'home', 
         name: 'Home',   
@@ -193,6 +199,11 @@ export let navigations = [
     {
         key: 'projects',
         name: 'Proyectos',  
+        /*component: <Projects projects = {projects}/>*/
+    },
+    {
+        key: 'technologies',
+        name: 'Tecnologias',  
         /*component: <Projects projects = {projects}/>*/
     },
     {
@@ -216,6 +227,49 @@ export let navigations = [
             }
         ]
     },*/
+];
+
+export const technologies = [
+    {
+        name: 'JavaScript',
+        value: 90,
+        src: javaScript
+    },
+    {
+        name: 'NodeJS',
+        value: 70,
+        src: nodejs
+    },
+    {
+        name: 'ReactJS',
+        value: 80,
+        src: react
+    },
+    {
+        name: 'JQuery',
+        value: 90,
+        src: jquery
+    },
+    /*{
+        name: 'CSharp',
+        value: 90,
+        src: react
+    },
+    {
+        name: 'SQL Server',
+        value: 80,
+        src: null
+    },*/
+    {
+        name: 'ServiceLayer (SAP B1)',
+        value: 55,
+        src: sap
+    },
+    {
+        name: 'DI API (SAP B1)',
+        value: 55,
+        src: sap
+    },
 ];
 
 export default description;

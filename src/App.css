@@ -8,6 +8,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
+:root {
+  --progress: 0%;
+}
+
 * {
   margin: 0;
   padding:  0;
@@ -645,6 +649,50 @@ a {
   margin-bottom: 2em;  
 }
 
+/** Technology **/
+.container__routes .box__routes {
+  display: flex;
+
+}
+
+.technology__content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2em;
+  width: 100%;
+}
+
+.technology__img {
+  width: 55px !important;
+  height: 55px !important;
+}
+
+.technology__content>.technology__progress {
+  height: 10px;
+  width: var(--progress);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #0d6efd;
+  transition: width .6s cubic-bezier(1, 0, 0.25, 1);
+  border-radius: 30px; 
+   
+}
+
+.progress-bar-striped {
+  background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  background-size: 1rem 1rem;
+}
+
+
+.technology__content> .span__routes {
+  padding-left: 0 !important;
+  margin-bottom: 5px;
+}
 
 /** MOVILE **/
 @media (max-width: 767px) {
