@@ -237,7 +237,7 @@ export const technologies = [
     },
     {
         name: 'NodeJS',
-        value: 70,
+        value: 50,
         src: nodejs, 
     },
     {
@@ -261,7 +261,7 @@ export const technologies = [
         value: 80,
         src: null,
         color: 'rose'
-    },*/
+    },
     {
         name: 'ServiceLayer (SAP B1)',
         value: 55,
@@ -271,7 +271,7 @@ export const technologies = [
         name: 'DI API (SAP B1)',
         value: 55,
         src: sap, 
-    },
+    },*/
 ];
 
 export default description;
