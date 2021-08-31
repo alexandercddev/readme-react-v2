@@ -22,8 +22,8 @@ import nodejs from '../assets/svg/nodejs-icon.svg';
 import react from '../assets/svg/react-icon.svg';
 import jquery from '../assets/svg/jquery-icon.svg';
 import sap from '../assets/svg/sap-icon.svg';
-/*import  from '../assets/svg/.svg';
-import  from '../assets/svg/.svg';*/
+import order from '../assets/img/projects/oder-summary.jpg';
+/*import  from '../assets/svg/.svg';*/
 
 export const description = {
     name: "alexandercds",
@@ -137,22 +137,21 @@ export const projects = [
         ]
     },
     {
-        key: "sunnyside-agency-landing-page",
-        img: sunnyside,
-        title: 'Sunnyside Agency',
-        description: "Sitio web con ReactJS, ejercicio de FrontEnd Mentor",
+        key: "order-summary-component",
+        img: order,
+        title: 'Order Summary Component',
+        description: "Sitio web con ReactJS y SASS, ejercicio de FrontEnd Mentor",
         urls: [
             {
-                value: 'https://alexandercds.github.io/sunnyside-agency-landing-page/',
+                value: 'https://alexandercds.github.io/order-summary-component/',
                 text: 'Ir al sitio',
             }, 
             {
-                value: 'https://github.com/AlexanderCDs/sunnyside-agency-landing-page',
+                value: 'https://github.com/AlexanderCDs/order-summary-component',
                 text: 'Ir al código',
             }, 
         ],
-    }, 
-    
+    },
     {
         key: "blogr-landing-page",
         img: blogr,
@@ -169,6 +168,22 @@ export const projects = [
             }, 
         ],
     },
+    {
+        key: "sunnyside-agency-landing-page",
+        img: sunnyside,
+        title: 'Sunnyside Agency',
+        description: "Sitio web con ReactJS, ejercicio de FrontEnd Mentor",
+        urls: [
+            {
+                value: 'https://alexandercds.github.io/sunnyside-agency-landing-page/',
+                text: 'Ir al sitio',
+            }, 
+            {
+                value: 'https://github.com/AlexanderCDs/sunnyside-agency-landing-page',
+                text: 'Ir al código',
+            }, 
+        ],
+    },  
 ];
 
 export const contact = {
