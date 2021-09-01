@@ -24,6 +24,7 @@ import jquery from '../assets/svg/jquery-icon.svg';
 import sap from '../assets/svg/sap-icon.svg';
 import order from '../assets/img/projects/oder-summary.jpg';
 import stats  from '../assets/img/projects/stats-preview.jpg';
+import columnpreview from '../assets/img/projects/3-column-preview.jpg';
 
 export const description = {
     name: "alexandercds",
@@ -137,9 +138,25 @@ export const projects = [
         ]
     },
     {
+        key: "3-column-preview-card-component-main",
+        img: columnpreview,
+        title: '3 Column Preview Card',
+        description: "Sitio web con ReactJS y SASS, ejercicio de FrontEnd Mentor",
+        urls: [
+            {
+                value: 'https://alexandercds.github.io/3-column-preview-card-component-main/',
+                text: 'Ir al sitio',
+            }, 
+            {
+                value: 'https://github.com/AlexanderCDs/3-column-preview-card-component-main/',
+                text: 'Ir al código',
+            }, 
+        ],
+    },
+    {
         key: "stats-preview-card-component",
         img: stats,
-        title: 'Stats Preview Card Component',
+        title: 'Stats Preview Card',
         description: "Sitio web con ReactJS y SASS, ejercicio de FrontEnd Mentor",
         urls: [
             {
@@ -147,7 +164,7 @@ export const projects = [
                 text: 'Ir al sitio',
             }, 
             {
-                value: 'https://github.com/AlexanderCDs/stats-preview-card-component',
+                value: 'https://github.com/AlexanderCDs/stats-preview-card-component/',
                 text: 'Ir al código',
             }, 
         ],
@@ -155,7 +172,7 @@ export const projects = [
     {
         key: "order-summary-component",
         img: order,
-        title: 'Order Summary Component',
+        title: 'Order Summary',
         description: "Sitio web con ReactJS y SASS, ejercicio de FrontEnd Mentor",
         urls: [
             {
@@ -163,7 +180,7 @@ export const projects = [
                 text: 'Ir al sitio',
             }, 
             {
-                value: 'https://github.com/AlexanderCDs/order-summary-component',
+                value: 'https://github.com/AlexanderCDs/order-summary-component/',
                 text: 'Ir al código',
             }, 
         ],
