@@ -25,7 +25,7 @@ export function Projects (props) {
                         <p className="projects__description">{item.description}</p>
                         <div className="projects__btns">
                             {item.urls.map((url, index) => { 
-                                return <a className="projects__url" onClick={() => {handleWindows(url.value)}}>{url.text}</a>
+                                return <a key={`url-${index}`} className="projects__url" onClick={() => {handleWindows(url.value)}}>{url.text}</a>
                             })} 
                         </div> 
                     </div>

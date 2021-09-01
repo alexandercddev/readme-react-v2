@@ -23,7 +23,7 @@ import react from '../assets/svg/react-icon.svg';
 import jquery from '../assets/svg/jquery-icon.svg';
 import sap from '../assets/svg/sap-icon.svg';
 import order from '../assets/img/projects/oder-summary.jpg';
-/*import  from '../assets/svg/.svg';*/
+import stats  from '../assets/img/projects/stats-preview.jpg';
 
 export const description = {
     name: "alexandercds",
@@ -135,6 +135,22 @@ export const projects = [
                 text: 'Ir al código',
             } 
         ]
+    },
+    {
+        key: "stats-preview-card-component",
+        img: stats,
+        title: 'Stats Preview Card Component',
+        description: "Sitio web con ReactJS y SASS, ejercicio de FrontEnd Mentor",
+        urls: [
+            {
+                value: 'https://alexandercds.github.io/stats-preview-card-component/',
+                text: 'Ir al sitio',
+            }, 
+            {
+                value: 'https://github.com/AlexanderCDs/stats-preview-card-component',
+                text: 'Ir al código',
+            }, 
+        ],
     },
     {
         key: "order-summary-component",
