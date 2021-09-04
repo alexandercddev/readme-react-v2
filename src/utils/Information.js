@@ -25,6 +25,8 @@ import sap from '../assets/svg/sap-icon.svg';
 import order from '../assets/img/projects/oder-summary.jpg';
 import stats  from '../assets/img/projects/stats-preview.jpg';
 import columnpreview from '../assets/img/projects/3-column-preview.jpg';
+import profile from '../assets/img/projects/profile-card.jpg';
+import faq from '../assets/img/projects/faq-accordion.jpg';
 
 export const description = {
     name: "alexandercds",
@@ -104,38 +106,38 @@ export const projects = [
                 text: 'Ir al sitio',
             }
         ],
-    },
+    }, 
     {
-        key: "alexandercds1",
-        img: alexandercd1,
-        title: 'Portafolio v1',
-        description: "Sitio web con ReactJS, Material UI,Material Icons, SwetAlert2",
+        key: "faq-accordion-card-main",
+        img: faq,
+        title: 'FAQ Accordion',
+        description: "Sitio web con ReactJS y SASS, ejercicio de FrontEnd Mentor",
         urls: [
             {
-                value: 'https://alexandercds.github.io/readme-react/',
+                value: 'https://alexandercds.github.io/faq-accordion-card-main/',
                 text: 'Ir al sitio',
-            },
+            }, 
             {
-                value: 'https://github.com/AlexanderCDs/readme-react',
+                value: 'https://github.com/AlexanderCDs/faq-accordion-card-main/',
                 text: 'Ir al código',
-            }
-        ]
+            }, 
+        ],
     },
     {
-        key: "alexandercds2",
-        img: alexandercd2,
-        title: 'Portafolio v2',
-        description: "Sitio web con ReactJS y CSS",
+        key: "profile-card-component-main",
+        img: profile,
+        title: 'Profile Card',
+        description: "Sitio web con ReactJS y SASS, ejercicio de FrontEnd Mentor",
         urls: [
             {
-                value: 'https://alexandercd.herokuapp.com/',
+                value: 'https://alexandercds.github.io/profile-card-component-main/',
                 text: 'Ir al sitio',
-            },
+            }, 
             {
-                value: 'https://github.com/AlexanderCDs/readme-react-v2',
+                value: 'https://github.com/AlexanderCDs/profile-card-component-main/',
                 text: 'Ir al código',
-            } 
-        ]
+            }, 
+        ],
     },
     {
         key: "3-column-preview-card-component-main",
@@ -217,6 +219,38 @@ export const projects = [
             }, 
         ],
     },  
+    {
+        key: "alexandercds1",
+        img: alexandercd1,
+        title: 'Portafolio v1',
+        description: "Sitio web con ReactJS, Material UI,Material Icons, SwetAlert2",
+        urls: [
+            {
+                value: 'https://alexandercds.github.io/readme-react/',
+                text: 'Ir al sitio',
+            },
+            {
+                value: 'https://github.com/AlexanderCDs/readme-react',
+                text: 'Ir al código',
+            }
+        ]
+    },
+    {
+        key: "alexandercds2",
+        img: alexandercd2,
+        title: 'Portafolio v2',
+        description: "Sitio web con ReactJS y CSS",
+        urls: [
+            {
+                value: 'https://alexandercd.herokuapp.com/',
+                text: 'Ir al sitio',
+            },
+            {
+                value: 'https://github.com/AlexanderCDs/readme-react-v2',
+                text: 'Ir al código',
+            } 
+        ]
+    },
 ];
 
 export const contact = {

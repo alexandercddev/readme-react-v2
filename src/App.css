@@ -714,6 +714,11 @@ a {
   margin-bottom: 5px;
 }
 
+.img__content {
+  display: flex;
+  justify-content: center;
+}
+
 /** MOVILE **/
 @media (max-width: 767px) {
   header { 

@@ -16,11 +16,13 @@ export function Projects (props) {
             <div className="container__projects_v2"> 
                 {projects.map((item, index) => {
                     return <div className="projects__card" key={item.key}>
-                        <img 
-                            alt={item.key} 
-                            src={item.img}
-                            onClick={() => {handleWindows(item.urls[0].value)}}
-                            ></img>
+                        <div className="img__content">
+                            <img 
+                                alt={item.key} 
+                                src={item.img}
+                                onClick={() => {handleWindows(item.urls[0].value)}}
+                                ></img>
+                        </div>
                         <h4 className="projects__title">{item.title}</h4>
                         <p className="projects__description">{item.description}</p>
                         <div className="projects__btns">
