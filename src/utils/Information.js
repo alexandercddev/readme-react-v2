@@ -122,11 +122,11 @@ export const projects = [
         description: "Sitio web con ReactJS y SASS, ejercicio de FrontEnd Mentor",
         urls: [
             {
-                value: 'https://alexandercds.github.io/huddle-landing-page-with-single-introductory-section/',
+                value: 'https://alexandercds.github.io/huddle-landing-page/',
                 text: 'Ir al sitio',
             }, 
             {
-                value: 'https://github.com/AlexanderCDs/huddle-landing-page-with-single-introductory-section/',
+                value: 'https://github.com/AlexanderCDs/huddle-landing-page/',
                 text: 'Ir al código',
             }, 
         ],
