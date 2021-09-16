@@ -27,6 +27,14 @@ import stats  from '../assets/img/projects/stats-preview.jpg';
 import columnpreview from '../assets/img/projects/3-column-preview.jpg';
 import profile from '../assets/img/projects/profile-card.jpg';
 import faq from '../assets/img/projects/faq-accordion.jpg';
+import socialProof from '../assets/img/projects/social-proof.jpg';
+import articlePreview from '../assets/img/projects/article-preview.jpg';
+import fourCard from '../assets/img/projects/four-card.jpg';
+import baseApparel from '../assets/img/projects/base-apparel.jpg';
+import introComponent from '../assets/img/projects/intro-component.jpg';
+import singlePrice from '../assets/img/projects/singles-price.jpg';
+import pingComing from '../assets/img/projects/ping-coming.jpg';
+import huddleLanding from '../assets/img/projects/huddle-landing.jpg';
 
 export const description = {
     name: "alexandercds",
@@ -105,6 +113,134 @@ export const projects = [
                 value: 'https://www.mielroche.com.mx/',
                 text: 'Ir al sitio',
             }
+        ],
+    }, 
+    {
+        key: "huddle-landing-page",
+        img: huddleLanding,
+        title: 'Huddle Landing Page',
+        description: "Sitio web con ReactJS y SASS, ejercicio de FrontEnd Mentor",
+        urls: [
+            {
+                value: 'https://alexandercds.github.io/huddle-landing-page-with-single-introductory-section/',
+                text: 'Ir al sitio',
+            }, 
+            {
+                value: 'https://github.com/AlexanderCDs/huddle-landing-page-with-single-introductory-section/',
+                text: 'Ir al código',
+            }, 
+        ],
+    },
+    {
+        key: "ping-coming-soon-page",
+        img: pingComing,
+        title: 'Ping Coming Soon',
+        description: "Sitio web con ReactJS y SASS, ejercicio de FrontEnd Mentor",
+        urls: [
+            {
+                value: 'https://alexandercds.github.io/ping-coming-soon-page/',
+                text: 'Ir al sitio',
+            }, 
+            {
+                value: 'https://github.com/AlexanderCDs/ping-coming-soon-page/',
+                text: 'Ir al código',
+            }, 
+        ],
+    },
+    {
+        key: "single-price-grid-component",
+        img: singlePrice,
+        title: 'Single Price',
+        description: "Sitio web con ReactJS y SASS, ejercicio de FrontEnd Mentor",
+        urls: [
+            {
+                value: 'https://alexandercds.github.io/single-price-grid-component/',
+                text: 'Ir al sitio',
+            }, 
+            {
+                value: 'https://github.com/AlexanderCDs/single-price-grid-component/',
+                text: 'Ir al código',
+            }, 
+        ],
+    },
+    {
+        key: "intro-component-with-signup-form",
+        img: introComponent,
+        title: 'Intro Component',
+        description: "Sitio web con ReactJS y SASS, ejercicio de FrontEnd Mentor",
+        urls: [
+            {
+                value: 'https://alexandercds.github.io/intro-component-with-signup-form/',
+                text: 'Ir al sitio',
+            }, 
+            {
+                value: 'https://github.com/AlexanderCDs/intro-component-with-signup-form/',
+                text: 'Ir al código',
+            }, 
+        ],
+    },
+    {
+        key: "base-apparel-coming-soon",
+        img: baseApparel,
+        title: 'Base Apparel Coming Soon',
+        description: "Sitio web con ReactJS y SASS, ejercicio de FrontEnd Mentor",
+        urls: [
+            {
+                value: 'https://alexandercds.github.io/base-apparel-coming-soon-master/',
+                text: 'Ir al sitio',
+            }, 
+            {
+                value: 'https://github.com/AlexanderCDs/base-apparel-coming-soon-master/',
+                text: 'Ir al código',
+            }, 
+        ],
+    },
+    {
+        key: "four-card-feature-section",
+        img: fourCard,
+        title: 'Four Card Feature Section',
+        description: "Sitio web con ReactJS y SASS, ejercicio de FrontEnd Mentor",
+        urls: [
+            {
+                value: 'https://alexandercds.github.io/four-card-feature-section-master/',
+                text: 'Ir al sitio',
+            }, 
+            {
+                value: 'https://github.com/AlexanderCDs/four-card-feature-section-master/',
+                text: 'Ir al código',
+            }, 
+        ],
+    },
+    {
+        key: "article-preview-component",
+        img: articlePreview,
+        title: 'Article Preview Component',
+        description: "Sitio web con ReactJS y SASS, ejercicio de FrontEnd Mentor",
+        urls: [
+            {
+                value: 'https://alexandercds.github.io/article-preview-component-master/',
+                text: 'Ir al sitio',
+            }, 
+            {
+                value: 'https://github.com/AlexanderCDs/article-preview-component-master/',
+                text: 'Ir al código',
+            }, 
+        ],
+    },
+    {
+        key: "social-proof-section",
+        img: socialProof,
+        title: 'Social Proof Section',
+        description: "Sitio web con ReactJS y SASS, ejercicio de FrontEnd Mentor",
+        urls: [
+            {
+                value: 'https://alexandercds.github.io/social-proof-section-master/',
+                text: 'Ir al sitio',
+            }, 
+            {
+                value: 'https://github.com/AlexanderCDs/social-proof-section-master/',
+                text: 'Ir al código',
+            }, 
         ],
     }, 
     {
