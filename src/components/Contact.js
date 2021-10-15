@@ -9,7 +9,7 @@ import { SocialMedial } from './Components';
 
 export function Contact (props) {  
     const {contact, routes} = Constants
-    const handleWindows = (url) => { window.open(url) } 
+    const handleWindows = (url) => {   } 
 
     return (<>
         <div className="body__contact">
